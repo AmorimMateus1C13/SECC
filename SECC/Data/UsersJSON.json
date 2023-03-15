@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "email": "tester1@teste.com.br",
+            "password": "teste123!",
+            "userName": "Testador",
+            "userSurname": "1",
+            "blockAdress": "16",
+            "apartAdress": "14"
+        },
+        {
+            "email": "tester2@teste.com.br",
+            "password": "teste123!",
+            "userName": "Testador",
+            "userSurname": "2",
+            "blockAdress": "14",
+            "apartAdress": "61"
+        }
+    ]
+}

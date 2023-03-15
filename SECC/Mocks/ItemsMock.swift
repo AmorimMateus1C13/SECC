@@ -31,16 +31,12 @@ struct ItemsCollectionController {
     static var productDetail: [String] = ["Nenhuma descrição disponível."]
 }
 
-struct Category {
-    static var titles: [String] = ["Ferramentas", "Apartamentos", "Recreação", "Salão de Festa", "Serviços", "Estacionamento"]
-}
-
 struct Tools {
     static var toolTitle: [String] = ["Martelo", "Chave Inglesa", "Multímetro"]
     
     static var toolImage: [String] = ["Martelo", "ChaveInglesa", "Multimetro"]
     
-    static var itemImage: [UIImage] = [ImagesMock.marteloImage!, ImagesMock.chaveImage!, ImagesMock.medidorImage!]
+//    static var itemImage: [UIImage] = [ImagesMock.marteloImage!, ImagesMock.chaveImage!, ImagesMock.medidorImage!]
     
     static var toolValues: [String] = ["R$5,00", "R$7,00", "R$15,00"]
     
@@ -52,7 +48,7 @@ struct Tools {
 
 struct Apt {
     static var aptTitle: [String] = ["Bloco 4, Apt 14","Bloco 5, Apt 23", "Bloco 2, Apt 34"]
-    static var aptImage: [UIImage] = [ImagesMock.Apt.aptImage1!, ImagesMock.Apt.aptImage2!, ImagesMock.Apt.aptImage3!]
+//    static var aptImage: [UIImage] = [ImagesMock.Apt.aptImage1!, ImagesMock.Apt.aptImage2!, ImagesMock.Apt.aptImage3!]
     static let aptImageNames: [String] = ["building", "building", "building"]
     static var aptValues: [String] = ["", "", ""]
     
@@ -63,20 +59,20 @@ struct Apt {
 struct Recreation {
     static var recreationTitle: [String] = ["Churrasqueira","Sauna", "Sala de Cinema","Quadra de Vôlei", "Quadra de Futebol", "Quadra de Tênis"]
     
-    static var recreationImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
+//    static var recreationImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
     
     static var recreationValues: [String] = ["", "", "", "", "", ""]
 }
 
 struct PartyRoom {
     static var partyRoomTitle: [String] = ["Bloco 16, Apt 14","Bloco 20, Apt 23", "Bloco 16, Apt 34"]
-    static var partyRoomImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
+//    static var partyRoomImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
     static var partyRoomValues: [String] = ["", "", ""]
 }
 
 struct Services {
     static var servicesTitle: [String] = ["Eletricista","Encanamento", "Manutenções"]
-    static var servicesImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
+//    static var servicesImage: [UIImage] = [ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!,ImagesMock.Recreation.aptImage1!]
     static var servicesValues: [String] = ["", "", ""]
 }
 

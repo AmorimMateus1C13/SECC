@@ -8,46 +8,46 @@
 import Foundation
 import UIKit
 
-struct ImagesMock {
-    
-    static let marteloImage = UIImage(named: ItemsMock.tools.toolImage[0])
-    
-    static let chaveImage = UIImage(named: ItemsMock.tools.toolImage[1])
-
-    static let medidorImage = UIImage(named: ItemsMock.tools.toolImage[2])
-    
-    
-    struct Apt {
-        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
-    }
-    
-    struct Recreation {
-        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
-    }
-    
-    struct PartyRoom {
-        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
-    }
-    
-    struct Services {
-        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
-    }
-    
-    struct Parking {
-        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
-        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
-    }
-    
-}
+//struct ImagesMock {
+//    
+//    static let marteloImage = UIImage(named: ItemsMock.tools.toolImage[0])
+//    
+//    static let chaveImage = UIImage(named: ItemsMock.tools.toolImage[1])
+//
+//    static let medidorImage = UIImage(named: ItemsMock.tools.toolImage[2])
+//    
+//    
+//    struct Apt {
+//        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
+//    }
+//    
+//    struct Recreation {
+//        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
+//    }
+//    
+//    struct PartyRoom {
+//        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
+//    }
+//    
+//    struct Services {
+//        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
+//    }
+//    
+//    struct Parking {
+//        static let aptImage1 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage2 = UIImage(systemName: ItemsMock.homeController.images[1])
+//        static let aptImage3 = UIImage(systemName: ItemsMock.homeController.images[1])
+//    }
+//    
+//}
 
 
 //static let apt = Apt.self
