@@ -12,6 +12,6 @@ struct ShoppingItemsCart {
     
     static var itemsTitle: [String] = []
     static var valuesItems: [String] = []
-    static var imagesItems: [UIImage] = []
+    static var imagesItems: [String] = []
     static var detailItems: [String] = []
 }

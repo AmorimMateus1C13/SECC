@@ -1,0 +1,244 @@
+{
+    "categorias": [
+            {
+                "categoryName": "Ferramentas",
+                "objectOfCategory": [
+                    {
+                        "objectName": "martelo",
+                        "objectPrice": "5,00",
+                        "objectDetails": "Usado para fixar pregos em paredes e madeiras. Auxilia em diversos trabalhos manuais.",
+                        "objectImage": "https://thumbs.dreamstime.com/b/martelo-10369827.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://thumbs.dreamstime.com/b/martelo-10369827.jpg"
+                            },
+                            {
+                                "itemImage": "https://thumbs.dreamstime.com/b/martelo-e-prego-na-madeira-16419687.jpg"
+                            },
+                            {
+                                "itemImage": "https://sonhoastral.com/uploads/content/image/207208/sonhar-com-martelo__3_.png"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "Chave Inglesa",
+                        "objectPrice": "7,00",
+                        "objectDetails": "Usado para soltar e prender parafusos. Auxilia em diversos trabalhos manuais.",
+                        "objectImage": "https://cdn.leroymerlin.com.br/products/chave_inglesa_10_tramontina_90779983_0001_600x600.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://cdn.leroymerlin.com.br/products/chave_inglesa_10_tramontina_90779983_0001_600x600.jpg"
+                            },
+                            {
+                                "itemImage": "https://images-submarino.b2w.io/produtos/3272362574/imagens/chave-inglesa-6-stanley/3272362603_1_large.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "multimetro",
+                        "objectPrice": "15,00",
+                        "objectDetails": "Usado para tensões, capacitores, voltagens e resistências. Auxilia em diversos trabalhos elétricos.",
+                        "objectImage": "https://teravirt.s3-accelerate.amazonaws.com/uploads/sites/100/2022/02/MULTIMETRO-DIGITAL-DT-9205A.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://teravirt.s3-accelerate.amazonaws.com/uploads/sites/100/2022/02/MULTIMETRO-DIGITAL-DT-9205A.jpg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryName": "Apartamentos",
+                "objectOfCategory": [
+                    {
+                        "objectName": "Bloco 16 Apt 14",
+                        "objectPrice": "250.000,00",
+                        "objectDetails": "Apartamento grande",
+                        "objectImage": "https://grupospimovel.s3.amazonaws.com/Imagens/3/Interno/4724/Lancamento/7733/20211005144613_17___DIALOGO_ANDRE_VIDAL_01_FACHADA_HR_02_20210817_131832.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://grupospimovel.s3.amazonaws.com/Imagens/3/Interno/4724/Lancamento/7733/20211005144613_17___DIALOGO_ANDRE_VIDAL_01_FACHADA_HR_02_20210817_131832.jpg"
+                            },
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVjawoZOynwP9SQz3e9AMXnKaGRSgsEWv_9g&usqp=CAU"
+                            },
+                            {
+                                "itemImage": "https://www.construtoradubai.com.br/wp-content/uploads/2021/02/10-dicas-de-decoracao-para-apartamentos-compactos-4.jpg"
+                            },
+                            {
+                                "itemImage": "https://img.imageboss.me/production-yuca-real-estate-assets/width/1350/compression:false/cb25c3ee-5870-4e3a-9785-ed4997d5a61d/6d624e4b-f263-4def-941e-229596d2aab6/75cebe68-bb7d-4832-bd0a-734671b742bb.jpg"
+                            },
+                            {
+                                "itemImage": "https://betaimages.lopes.com.br/realestate/sml/REO454828/052128A1B68830E1C30CA52C5BD0FDB0.JPEG"
+                            },
+                        ]
+                    },
+                    {
+                        "objectName": "Bloco 17 Apt 15",
+                        "objectPrice": "70.000,00",
+                        "objectDetails": "Apartamento pequeno",
+                        "objectImage": "https://img.imageboss.me/production-yuca-real-estate-assets/width/1350/compression:false/cb25c3ee-5870-4e3a-9785-ed4997d5a61d/6d624e4b-f263-4def-941e-229596d2aab6/75cebe68-bb7d-4832-bd0a-734671b742bb.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://img.imageboss.me/production-yuca-real-estate-assets/width/1350/compression:false/cb25c3ee-5870-4e3a-9785-ed4997d5a61d/6d624e4b-f263-4def-941e-229596d2aab6/75cebe68-bb7d-4832-bd0a-734671b742bb.jpg"
+                            },
+                            {
+                                "itemImage": "https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu3Z318tFt0cw15Y8ZILvri-e5cCb2O6HllWw9IjTvY-m1Ni6RtmDyINl1K3ZNwOgjY89f8IFKn0iPbdQfS34T4DfLUFK%2BQOFvVT9FphWb2NawCUtyxMK9EK1WoGdz0Uc0QaEUdzSgXGdQqHWC11BSbMNAdsz6EIJ9xa9SUxy8h8d4563vSCAaKyyLIOvkiMYDwYu6oa6SeKv15TFJsonDqooL34J41sRFqAe2beFX6J24QkLuOfUB1%2BEkBnHl%2B8kYMGwVtdPnrxSxQrFSLFG7Ba8x9WShqKqO02ANQc99byZ%2BfXlPPbyTrSte2%2BjxctT%2BJLOIIRLK43kQSRVXWU1enAd-FK4%2BPTZ4hixMic%3D.jpg"
+                            },
+                            {
+                                "itemImage": "https://img.imageboss.me/production-yuca-real-estate-assets/width/1350/compression:false/cb25c3ee-5870-4e3a-9785-ed4997d5a61d/6d624e4b-f263-4def-941e-229596d2aab6/75cebe68-bb7d-4832-bd0a-734671b742bb.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "Bloco 18 Apt 16",
+                        "objectPrice": "150.000,00",
+                        "objectDetails": "Apartamento médio",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YzRtXYTq5Aoop0Rx3-IdhsZtXA0y4S98Jw&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YzRtXYTq5Aoop0Rx3-IdhsZtXA0y4S98Jw&usqp=CAU"
+                            },
+                            {
+                                "itemImage": "https://cdn.vistahost.com.br/procurad/vista.imobi/fotos/12425/iZ82z9EP512_1242564072fecd49a2.jpg"
+                            },
+                            {
+                                "itemImage": "https://blog.setin.com.br/hs-fs/hubfs/diferencas-entre-kitnet-studio-e-apartamento-de-um-quarto.jpg?width=1000&name=diferencas-entre-kitnet-studio-e-apartamento-de-um-quarto.jpg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryName": "Recreação",
+                "objectOfCategory": [
+                    {
+                        "objectName": "Piscina",
+                        "objectPrice": "grátis",
+                        "objectDetails": "Mediante agendamento",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYTjP_5rlBqz51oF_ajnmKBokEx6Bt3Eutg&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYTjP_5rlBqz51oF_ajnmKBokEx6Bt3Eutg&usqp=CAU"
+                            },
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWLcNmYLqRBFcSXE-Ta3eOfvExYHflQeYnA&usqp=CAU"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "Sala de Jogos",
+                        "objectPrice": "grátis",
+                        "objectDetails": "Mediante agendamento",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnxjBhc7L0w4_S552V0Urz12shI-cOCYcWQ&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnxjBhc7L0w4_S552V0Urz12shI-cOCYcWQ&usqp=CAU"
+                            },
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrtMP01vDScZA6S351SKeS8bv5yE2gqewycw&usqp=CAU"
+                            },
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjaQ8lYzkHmjSxG-TBieuKHADZRrxu3wiWcg&usqp=CAU"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryName": "Salão de Festas",
+                "objectOfCategory": [
+                    {
+                        "objectName": "Salão principal",
+                        "objectPrice": "50,00",
+                        "objectDetails": "Mediante agendamento",
+                        "objectImage": "https://www.amazoneventos.com.br/img/espaco-verde/espaco-verde-aniversario-crianca-decoracao-menina.jpg",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://www.amazoneventos.com.br/img/espaco-verde/espaco-verde-aniversario-crianca-decoracao-menina.jpg"
+                            },
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9nB4n3u7qBGxpK636OdOWmuD8lxUJHRHYg&usqp=CAU"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryName": "Serviços",
+                "objectOfCategory": [
+                    {
+                        "objectName": "Eletricista",
+                        "objectPrice": "130,00",
+                        "objectDetails": "Execução de Projetos Elétricos \nPlanejamento adequado, escolha inteligente dos materiais e execução rápida e qualificada dos seus serviços elétricos. \n\nInstalação de Luminárias \nFazemos uma instalação simples ou desenvolvemos seu projeto com funcionalidade, beleza e economia de energia. \n\nQuadro de Distribuição de Energia \nInstalações de quadros requerem dimensionamento da rede e distribuição correta da fiação, evitando sobrecargas. \nTroca de Cabeamento Elétrico \n\nRealizamos inspeções e, caso necessário, trocamos seu cabeamento, com materiais de qualidade e custo justo. \nTroca e Remanejamento de Tomadas \nMudanças na sua rede pedem atenção do eletricista para evitar sobrecargas e garantir seu bom funcionamento. \n\nInstalação e Manutenção \nSeja reparo, manutenção preventiva ou instalação. Temos um serviço elétrico de qualidade para sua empresa ou residência. \n\nPreço da diária: R$ 130,00.",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs1XBVYRdGUksvqmF6a8JHMNhP0f75FQFmhg&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs1XBVYRdGUksvqmF6a8JHMNhP0f75FQFmhg&usqp=CAU"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "Pedreiro",
+                        "objectPrice": "320,00",
+                        "objectDetails": "Serviço de Pedreiro",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbUlMrrPwTsS7uj8jSs75kW1lD3KVETgBYrA&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbUlMrrPwTsS7uj8jSs75kW1lD3KVETgBYrA&usqp=CAU"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "Encanador",
+                        "objectPrice": "80,00",
+                        "objectDetails": "Serviços de encanamento",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-fhdiej79XQxN4O79h4Txs5ZFf33BxawQw&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-fhdiej79XQxN4O79h4Txs5ZFf33BxawQw&usqp=CAU"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryName": "Estacionamento",
+                "objectOfCategory": [
+                    {
+                        "objectName": "Vaga 116",
+                        "objectPrice": "100,00",
+                        "objectDetails": "vaga numa distância média da saída",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "vaga 17",
+                        "objectPrice": "80,00",
+                        "objectDetails": "vaga longe da saída",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU"
+                            }
+                        ]
+                    },
+                    {
+                        "objectName": "vaga 20",
+                        "objectPrice": "120,00",
+                        "objectDetails": "vaga proxima a saída",
+                        "objectImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU",
+                        "objectArrayImages": [
+                            {
+                                "itemImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFWKosXmo7AAj_ZRr-DEbGmjQrSoOfBFu3Q&usqp=CAU"
+                            }
+                        ]
+                    }
+                ]
+            }
+    ]
+}
