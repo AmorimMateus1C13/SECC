@@ -6,45 +6,38 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 protocol LoginViewModelProtocol {
-    func showAlert()
+    func callTabBarController(userIndentifier: String)
+    func emailDontExist()
+    func emailDifferenceInEmail()
 }
+
 class LoginViewModel {
     
+    let ref = Database.database().reference()
     var delegate: LoginViewModelProtocol?
-    var user: [Users]?
-    var provider: UsersMockProvider
     
-    init(delegate: LoginViewModelProtocol? = nil, user: [Users]? = nil, provider: UsersMockProvider = UsersMockProvider()) {
-        self.delegate = delegate
-        self.user = user
-        self.provider = provider
+    func getUserFromFirebase(blockAndApat: String, userPassword: String) {
+        ref.child("Users").child(blockAndApat).child("userId").child("password").observeSingleEvent(of: .value) { DataSnapshot in
+            guard let usersArray = DataSnapshot.value as? String else {
+                self.delegate?.emailDontExist()
+                return
+            }
+            self.getPassword(passData: usersArray, userPassword: userPassword, userIdentifier: blockAndApat)
+        }
     }
     
-    func callMock() {
-        if let user = getLocal() {
-            self.user = user.users
+    func getPassword(passData: String, userPassword: String, userIdentifier: String) {
+        if passData == userPassword {
+            self.delegate?.callTabBarController(userIndentifier: userIdentifier)
         } else {
-            self.provider.getData { result in
-                switch result {
-                case .success(let response):
-                    self.user = response.users
-                case .failure(_):
-                    self.delegate?.showAlert()
-                }
-            }
+            self.alertDifferenceEmail()
         }
     }
-    
-   func getLocal()-> CreatUsers? {
-        if let data = UserDefaults.standard.data(forKey: Constants.usersJSON.defaultName) {
-            do {
-                let decoder = JSONDecoder()
-                return try decoder.decode(CreatUsers.self, from: data)
-            }catch {
-                print("Unable to decode Note \(error)")
-            }
-        }
-        return nil
+
+    func alertDifferenceEmail() {
+        self.delegate?.emailDifferenceInEmail()
     }
 }

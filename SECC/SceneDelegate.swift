@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
-        let loginViewModel = LoginViewModel()
-        navigationController.pushViewController(LoginViewController(loginViewModel: loginViewModel), animated: true)
+//        let loginViewModel = LoginViewModel()
+        navigationController.pushViewController(LoginViewController(), animated: true)
         window?.makeKeyAndVisible()
     }
 

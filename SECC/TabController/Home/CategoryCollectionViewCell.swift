@@ -73,7 +73,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func choiceImageButton(image: String) {
-
         imageItem.image = UIImage(systemName: image)
     }
     

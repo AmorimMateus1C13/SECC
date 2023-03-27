@@ -10,13 +10,20 @@ import SnapKit
 
 class ItemsCollectionViewController: UIViewController {
     
-    var items: [String] = []
-    var imagesItems2: [UIImage] = []
-    var value: [String] = []
-    var itemsArrayInfo: Category
+    var itemsViewModel: ItemsViewModel?
+    var amountOfObjects: Int = Int()
+    var categoryTitle: String = String()
+    var categoryId: Int = Int()
+    var objectImage: [String] = []
+    var objectNames: [String] = []
+    var objectPrice: [String] = []
+    var userIndentifier: String = String()
     
-    init(itemsArrayInfo: Category) {
-        self.itemsArrayInfo = itemsArrayInfo
+    init(categoryTitle: String, categoryId: Int, itemsViewModel: ItemsViewModel? = ItemsViewModel(), userIndentifier: String ) {
+        self.categoryTitle = categoryTitle
+        self.categoryId = categoryId
+        self.itemsViewModel = itemsViewModel
+        self.userIndentifier = userIndentifier
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,13 +31,16 @@ class ItemsCollectionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLabel.text = categoryTitle
         view.backgroundColor = Colors.LoginView.backgroundView
         navigationController?.navigationBar.topItem?.backButtonTitle = TitlesOfControllers.tabTitles.homeTitle
         addInView()
         makeConstrants()
+        itemsViewModel?.getAmountOfObjects(category: categoryId)
+        itemsViewModel?.delegate = self
     }
     
     var titleLabel: UILabel = {
@@ -80,22 +90,47 @@ extension ItemsCollectionViewController {
     }
 }
 
+extension ItemsCollectionViewController: ItemsViewModelProtocol {
+    func getAmountObjects(amountOfObjects: Int) {
+        self.amountOfObjects = amountOfObjects
+        collectionView.reloadData()
+    }
+    
+    func getObjectImages(objectImages: String) {
+        self.objectImage.append(objectImages)
+        collectionView.reloadData()
+    }
+    
+    func getObjectName(objectName: String) {
+        self.objectNames.append(objectName)
+        collectionView.reloadData()
+    }
+    
+    func getObjectPrice(objectPrice: String) {
+        self.objectPrice.append(objectPrice)
+        collectionView.reloadData()
+    }
+    
+}
+
 extension ItemsCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return itemsArrayInfo.objectOfCategory.count
+        return amountOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemsCollectionViewCell.identifier, for: indexPath) as? ItemsCollectionViewCell
         
-        cell?.updateItems(image: itemsArrayInfo.objectOfCategory[indexPath.row].objectImage, title: itemsArrayInfo.objectOfCategory[indexPath.row].objectName, value: itemsArrayInfo.objectOfCategory[indexPath.row].objectPrice)
+        if objectImage != [] && objectNames != [] && objectPrice != [] {
+            cell?.updateItems(image: objectImage[indexPath.row], title: objectNames[indexPath.row], value: objectPrice[indexPath.row])
+        }
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        let vc = DetailsItemViewController(objectOfCategory: itemsArrayInfo.objectOfCategory[indexPath.row], backButtonTitle: itemsArrayInfo.categoryName)
+        
+        let vc = DetailsItemViewController(categoryName: categoryTitle,objectName: objectNames[indexPath.row], currentcategoryId: categoryId, currentObjectId: indexPath.row, objectPrice: objectPrice[indexPath.row], userIndentifier: userIndentifier)
             navigationController?.pushViewController(vc, animated: true)
     }
 }

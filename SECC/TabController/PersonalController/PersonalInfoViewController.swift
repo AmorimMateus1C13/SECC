@@ -10,10 +10,18 @@ import UIKit
 class PersonalInfoViewController: UIViewController {
     
     var personalnfoView = PersonalInfoView()
-    var currentUser: Users?
+    var userIdentifier: String = String()
+    var userEmail: String = String()
+    var userPassword: String = String()
+    var userBlock: String = String()
+    var userApt: String =  String()
+    var userName: String = String()
+    var userSurName: String = String()
+    var personalViewModel: PersonalViewModel?
     
-    init(currentUser: Users) {
-        self.currentUser = currentUser
+    init(userIdentifier: String, personalViewModel: PersonalViewModel? = PersonalViewModel()) {
+        self.userIdentifier = userIdentifier
+        self.personalViewModel = personalViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,19 +30,27 @@ class PersonalInfoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        personalnfoView.setUserInformation(
-            email: currentUser?.email ?? String(),
-            name: currentUser?.userName ?? String(),
-            surname: currentUser?.userSurname ?? String(),
-            password: currentUser?.password ?? String(),
-            block: currentUser?.blockAdress ?? String(),
-            apart: currentUser?.apartAdress ?? String())
+        personalViewModel?.delegate = self
+        personalViewModel?.loadUserInformation(userIdentifier: userIdentifier)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addInView()
         makeConstrants()
+        updateUserInfo()
+    }
+    
+    func updateUserInfo() {
+        if userName != String() && userEmail != String() && userPassword != String() && userBlock != String() && userApt != String() && userSurName != String() {
+            personalnfoView.setUserInformation(
+                email: userEmail,
+                name: userName,
+                surname: userSurName,
+                password: userPassword,
+                block: userBlock,
+                apart: userApt)
+        }
     }
 }
 
@@ -48,5 +64,37 @@ extension PersonalInfoViewController {
         personalnfoView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+}
+
+extension PersonalInfoViewController: PersonalViewModelProtocol {
+    func getUserEmail(userEmail: String) {
+        self.userEmail = userEmail
+        viewDidLoad()
+    }
+    
+    func getUserPassword(userPassword: String) {
+        self.userPassword = userPassword
+        viewDidLoad()
+    }
+    
+    func getUserApart(userApartment: String) {
+        self.userApt = userApartment
+        viewDidLoad()
+    }
+    
+    func getUserBlock(userBlock: String) {
+        self.userBlock = userBlock
+        viewDidLoad()
+    }
+    
+    func getUserName(userName: String) {
+        self.userName = userName
+        viewDidLoad()
+    }
+    
+    func getUserSurName(userSurName: String) {
+        self.userSurName = userSurName
+        viewDidLoad()
     }
 }

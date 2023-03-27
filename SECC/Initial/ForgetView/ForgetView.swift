@@ -13,7 +13,6 @@ class ForgetView:UIView {
         super.init(frame: frame)
         setupConfiguration()
         backgroundColor = Colors.LoginView.backgroundView
-
     }
     
     required init?(coder: NSCoder) {
@@ -45,7 +44,6 @@ class ForgetView:UIView {
         button.layer.cornerRadius = 5
         return button
     }()
-    
 }
 
 extension ForgetView: ConfigurationView {

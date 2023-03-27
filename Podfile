@@ -9,5 +9,7 @@ target 'SECC' do
  pod 'SnapKit'
  pod 'FSCalendar'
  pod 'SwipeCellKit'
+ pod 'Firebase/Core'
+ pod 'Firebase/Database'
 
 end
