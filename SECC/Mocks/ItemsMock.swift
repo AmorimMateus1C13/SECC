@@ -33,17 +33,16 @@ struct ItemsCollectionController {
 
 struct Tools {
     static var toolTitle: [String] = ["Martelo", "Chave Inglesa", "Multímetro"]
-    
+
     static var toolImage: [String] = ["Martelo", "ChaveInglesa", "Multimetro"]
-    
-//    static var itemImage: [UIImage] = [ImagesMock.marteloImage!, ImagesMock.chaveImage!, ImagesMock.medidorImage!]
-    
+
+
     static var toolValues: [String] = ["R$5,00", "R$7,00", "R$15,00"]
-    
+
     static let hammer: [String] = ["Martelo", "Martelo0", "Martelo1"]
     static let keyIngl: [String] = ["ChaveInglesa", "ChaveInglesa0", "ChaveInglesa1"]
     static let mult: [String] = ["Multimetro", "Multimetro0", "Multimetro1"]
-    
+
 }
 
 struct Apt {
@@ -51,7 +50,7 @@ struct Apt {
 //    static var aptImage: [UIImage] = [ImagesMock.Apt.aptImage1!, ImagesMock.Apt.aptImage2!, ImagesMock.Apt.aptImage3!]
     static let aptImageNames: [String] = ["building", "building", "building"]
     static var aptValues: [String] = ["", "", ""]
-    
+
     static let allapt: [String] = ["1","2","3","4","21","22","23","24","31","32","33","34","41","42","43","44","51","52","53","54"]
     static let allBloc: [String] = ["Bloco 1", "Bloco 2", "Bloco 3", "Bloco 4", "Bloco 5"]
 }

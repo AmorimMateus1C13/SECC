@@ -75,12 +75,12 @@ class PersonalInfoView: UIView {
     }
     
     func setUserInformation(email: String, name: String, surname: String, password: String, block: String, apart: String) {
-        self.userEmail.text = email
-        self.userName.text = name
-        self.userSurname.text = surname
-        self.userPassword.text = password
-        self.userBlock.text = block
-        self.userApart.text = apart
+        self.userEmail.text = "Email: \(email)"
+        self.userPassword.text = "Senha: \(password)"
+        self.userName.text = "Nome: \(name)"
+        self.userSurname.text = "Sobrenome: \(surname)"
+        self.userBlock.text = "Bloco: \(block)"
+        self.userApart.text = "Apartamento: \(apart)"
     }
     
 }
@@ -88,41 +88,41 @@ class PersonalInfoView: UIView {
 extension PersonalInfoView: ConfigurationView {
     func viewHierarchy() {
         addSubview(userEmail)
+        addSubview(userPassword)
         addSubview(userName)
         addSubview(userSurname)
-        addSubview(userPassword)
         addSubview(userBlock)
         addSubview(userApart)
     }
     
     func setConstrants() {
         userEmail.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).inset(8)
-            make.trailing.leading.equalToSuperview()
-        }
-        
-        userName.snp.makeConstraints { make in
-            make.top.equalTo(userEmail.snp.bottom).inset(8)
-            make.trailing.leading.equalToSuperview()
-        }
-        
-        userSurname.snp.makeConstraints { make in
-            make.top.equalTo(userName.snp.bottom).inset(8)
+            make.top.equalTo(safeAreaLayoutGuide).offset(32)
             make.trailing.leading.equalToSuperview()
         }
         
         userPassword.snp.makeConstraints { make in
-            make.top.equalTo(userSurname.snp.bottom).inset(8)
+            make.top.equalTo(userEmail.snp.bottom).offset(16)
+            make.trailing.leading.equalToSuperview()
+        }
+        
+        userName.snp.makeConstraints { make in
+            make.top.equalTo(userPassword.snp.bottom).offset(16)
+            make.trailing.leading.equalToSuperview()
+        }
+        
+        userSurname.snp.makeConstraints { make in
+            make.top.equalTo(userName.snp.bottom).offset(16)
             make.trailing.leading.equalToSuperview()
         }
         
         userBlock.snp.makeConstraints { make in
-            make.top.equalTo(userPassword.snp.bottom).inset(8)
+            make.top.equalTo(userSurname.snp.bottom).offset(16)
             make.trailing.leading.equalToSuperview()
         }
         
         userApart.snp.makeConstraints { make in
-            make.top.equalTo(userBlock.snp.bottom).inset(8)
+            make.top.equalTo(userBlock.snp.bottom).offset(16)
             make.trailing.leading.equalToSuperview()
         }
     }

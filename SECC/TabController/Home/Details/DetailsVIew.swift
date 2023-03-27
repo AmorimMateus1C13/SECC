@@ -17,20 +17,8 @@ protocol ButtonsActions {
 class DetailsView: UIView {
     
     var delegate: ButtonsActions?
-    
     var imageItem = UIImage()
-    var itemsCollectionImages: [ObjectArrayImages] = []
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = Colors.LoginView.backgroundView
-        setupConfiguration()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    var itemsCollectionImages: [String] = []
     let starCont: Int = 5
     
     var viewWithScroll: UIScrollView = {
@@ -43,7 +31,6 @@ class DetailsView: UIView {
     var itemTitle: UILabel = {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 21)
-       
         title.textAlignment = .center
         title.numberOfLines = 1
         title.textColor = .black
@@ -61,8 +48,6 @@ class DetailsView: UIView {
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(ImagesItemsCollectionViewCell.self, forCellWithReuseIdentifier: ImagesItemsCollectionViewCell.identifier)
-        collection.dataSource = self
-        collection.delegate = self
         collection.isPagingEnabled = true
         collection.backgroundColor = .clear
         return collection
@@ -148,7 +133,17 @@ class DetailsView: UIView {
         return label
     }()
     
-    func setView(itemsCollectionImages: [ObjectArrayImages], valueItem: String, detail: String, title: String) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = Colors.LoginView.backgroundView
+        setupConfiguration()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setView(itemsCollectionImages: [String], valueItem: String, detail: String, title: String) {
         self.itemsCollectionImages = itemsCollectionImages
         itemValue.text = valueItem
         detailsItem.text = detail
@@ -159,10 +154,6 @@ class DetailsView: UIView {
 extension DetailsView {
     
     @objc func addInCartTapped() {
-//        guard let itemText = itemTitle.text else { return }
-//        guard let value = itemValue.text else { return }
-//        guard let detail = detailsItem.text else { return }
-        
         delegate?.addInCart()
     }
     
@@ -245,26 +236,5 @@ extension DetailsView:ConfigurationView {
             make.trailing.leading.equalToSuperview().inset(8)
             make.height.equalTo(40)
         }
-    }
-}
-
-extension DetailsView: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = itemsCollectionImages.count
-        return itemsCollectionImages.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImagesItemsCollectionViewCell.identifier, for: indexPath) as? ImagesItemsCollectionViewCell
-        cell?.changeImage(image: itemsCollectionImages[indexPath.row].itemImage)
-        return cell ?? UICollectionViewCell()
-    }
-}
-
-extension DetailsView: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(collectionView.contentOffset.x / UIScreen.main.bounds.width)
-        pageControl.currentPage = Int(pageIndex)
     }
 }

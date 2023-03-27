@@ -16,7 +16,6 @@ class ForgetViewController: UIViewController {
         addInView()
         makeConstrants()
     }
-    
 }
 
 extension ForgetViewController {

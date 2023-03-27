@@ -1,41 +1,61 @@
 //
-//  HomeViewModel.swift
+//  ViewModelTest.swift
 //  SECC
 //
-//  Created by Mateus Amorim on 08/03/23.
+//  Created by Mateus Amorim on 17/03/23.
 //
 
 import Foundation
+import UIKit
+import FirebaseDatabase
+import Firebase
 
-protocol HomeViewModelProtocol {
-    func showAlert()
+protocol ViewModelProtocol {
+    func getAmountOfCategory(amountOfCategory: Int)
+    func getCategoriesNames(categoryNames: String)
+    func getCategoriesImages(categoryImage: String)
 }
 
 class HomeViewModel {
-    
-    var delegate: HomeViewModelProtocol?
-    var category: [Category]?
-    var provider: CategoryMockProvider
-    
-    init(delegate: HomeViewModelProtocol? = nil, category: [Category]? = nil, provider: CategoryMockProvider = CategoryMockProvider()) {
-        self.delegate = delegate
-        self.category = category
-        self.provider = provider
+
+    var delegate: ViewModelProtocol?
+    let ref = Database.database().reference()
+
+    func getAmountOfCategory() {
+        self.ref.child(DataObject.rootCategory).observe(.value) { DataSnapshot in
+            guard let categoryQtd = DataSnapshot.value as? [Any] else {
+                return
+            }
+            self.delegate?.getAmountOfCategory(amountOfCategory: categoryQtd.count)
+            self.getCategoriesNames(amountOfCategory: categoryQtd.count)
+            self.getCategoriesImages(amountOfCategory: categoryQtd.count)
+        }
     }
-    
-    func callMock() {
-        if let categoryData = GetLocalJson.getLocal() {
-            self.category = categoryData.categorias
-        } else {
-            self.provider.getData { result in
-                switch result {
-                case .success(let response):
-                    self.category = response.categorias
-                case .failure(_):
-                    self.delegate?.showAlert()
-                }
+
+    func getCategoriesNames(amountOfCategory: Int){
+        for i in 0..<amountOfCategory {
+            ref.child(DataObject.rootCategory).child("\(i)").child(DataObject.categoryName).observe(.value) { DataSnapshot in
+                guard let name = DataSnapshot.value as? String else { return }
+                self.delegate?.getCategoriesNames(categoryNames: name)
             }
         }
     }
-    
+
+    func getCategoriesImages(amountOfCategory:Int) {
+        for i in 0..<amountOfCategory {
+            ref.child(DataObject.rootCategory).child("\(i)").child(DataObject.categoryImage).observe(.value) { DataSnapshot in
+                guard let image = DataSnapshot.value as? String else { return }
+                self.delegate?.getCategoriesImages(categoryImage: image)
+            }
+        }
+    }
+
+    func getObjectName(category: Int) -> String {
+        var objectName: String = String()
+        ref.child(DataObject.rootCategory).child("\(category)").child(DataObject.objectName).observe(.value) { DataSnapshot in
+            guard let name = DataSnapshot.value as? String else { return }
+            objectName = name
+        }
+        return objectName
+    }
 }
